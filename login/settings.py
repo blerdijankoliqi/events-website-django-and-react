@@ -26,7 +26,8 @@ SECRET_KEY = '4#*j!_kw^4y2+b)to_fa=*nsza43)c87t&6l6id)z%hefl$4jx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://djangoteam.herokuapp.com','127.0.0.1:8000']
+ALLOWED_HOSTS = ['djangoteam.herokuapp.com','127.0.0.1:8000']
+
 
 
 # Application definition
@@ -66,7 +67,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'frontend/build')
+            os.path.join(BASE_DIR, 'build')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -97,10 +98,6 @@ DATABASES = {
     }
 }
 
-import dj_database_url
-db_from_env= dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
-
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -108,6 +105,8 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'djangoteam7@gmail.com'
 EMAIL_HOST_PASSWORD = 'pffpcqukeylzakji'
 EMAIL_USE_TLS = True
+
+
 
 
 # Password validation
@@ -148,13 +147,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'frontend/build/static')
-]
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'build/static')
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
