@@ -88,9 +88,9 @@ WSGI_APPLICATION = 'login.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'festival_kulture',
-        'USER': 'database_adminuser',
-        'PASSWORD': 'cGAO04rvTvrasdafas324324TgSmJ66G6LkHgJeHm1o',
+        'NAME': 'final',
+        'USER': 'postgres',
+        'PASSWORD': '123',
         'HOST': 'localhost',
     }
 }
