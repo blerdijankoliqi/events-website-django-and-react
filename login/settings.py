@@ -173,6 +173,7 @@ DJOSER = {
 CORS_ALLOW_CREDENTIALS = True
 
 ALLOWED_HOSTS = [
+    'djangoteam.herokuapp.com',
     '127.0.0.1',
 ]
 CORS_ORIGIN_WHITELIST = [
