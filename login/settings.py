@@ -177,6 +177,6 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
 ]
 CORS_ORIGIN_WHITELIST = [
-    # 'http://localhost:3000',
+    'https://djangoteam.herokuapp.com',
     'http://127.0.0.1:8000',
 ]
